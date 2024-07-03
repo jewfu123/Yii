@@ -81,9 +81,13 @@ server {
 https://www.yiiframework.com/doc/guide/2.0/en/start-installation
 
 
-
-
-
+## Vagrant Commands
+vagrant status
+vagrant global-status
+vagrant box list
+vagrant box add/remove
+vagrant up
+vagrant reload
 
 
 
