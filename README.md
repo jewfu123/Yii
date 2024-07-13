@@ -235,7 +235,14 @@ https://www.yiiframework.com/extension/yiisoft/yii2-app-advanced/doc/guide/2.0/e
 
 http://frontend.test/posts?page=1&expand=comments&fields=id,title,body
 ```
-
+#### CRUD add new modules steps:
+```shell
+1. ready database table. and migrate
+2. ready common/models/new model
+                      /query/new model query
+3. ready /frontend/resource/new model
+4. ready /frontend/controller/new model controller
+```
 
 
 
