@@ -242,32 +242,44 @@ http://frontend.test/posts?page=1&expand=comments&fields=id,title,body
                       /query/new model query
 3. ready /frontend/resource/new model
 4. ready /frontend/controller/new model controller
+5. modify /frontend/config/main.php -> urlManager modify route path and files.
+```
+
+#### yii cli commands:
+```shell
+yii migrate/create create_products_table --fields="name:string(255):notNull,description:text(),image:string(2000),price:decimal(10,2):notNull,status:tinyInteger(2):notNull,create_at:integer(11),updated_at:integer(11),created_by:integer(11):foreignkey(user),updated_by:integer(11):foreignkey(user)"
+
+
+http://frontend.test/articles/1
+
+http://localhost:8080/articles/1
+
+'pattern' => 'posts/<postId:\d+>/comments',
+
+http://frontend.test/site/verify-email?token=3DXti8btXEWVt8j-ytg6OcUK_7hnYi=f8BL_1720840934
+```
+
+#### Create admin user
+Run the following console command to create admin user. PASSWORD is optional, you can skip it and system will generate a random password
+```shell
+php yii app/create-admin-user USERNAME [PASSWORD]
+
+backend.yii2-ecommerce.localhost
+frontend.yii2-ecommerce.localhost
+
+http://frontend.yii2-ecommerce.localhost/storage/products/UCcqKrZbUMjpp7FYIBo35lsixOQtQUH9/ao-dai-6152101_1280.jpg
+
+php yii app/create-admin-user USERNAME [PASSWORD]
+php yii app/create-admin-user admin123 admin123
+
+
 ```
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    'frontendUrl' => 'http://frontend.yii2-ecommerce.localhost', // Ex: http://yii2-ecommerce.localhost
+    'paypalClientId' => '',
+    'paypalSecret' => '',
+    'vendorEmail' => 'admin@yourwebsite.com'
 
 
 
